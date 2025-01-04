@@ -9,6 +9,7 @@ import foodbankIcon from "./imgs/foodbank.png";
 import hospitalIcon from "./imgs/hospital.png";
 import shelterIcon from "./imgs/shelter.png";
 
+const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
 const containerStyle = {
   width: "100%",
   height: "400px",
@@ -64,7 +65,7 @@ function MapContainer() {
   });
 
   return (
-    <LoadScript googleMapsApiKey= {process.env.REACT_APP_GOOGLE_MAPS_API_KEY} >
+    <LoadScript googleMapsApiKey= {apiKey} >
       <select id="iconSelect" onChange={handleTypeChange}>
         <option value="default">Default</option>
         <option value="hospital">Hospital</option>
